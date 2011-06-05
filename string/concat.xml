@@ -21,7 +21,7 @@
 //y.include('http://www.datatables.org/javascript/json2.js');
 //var values = JSON.parse(values);
 
-response.object = "Hello Katamari2";
+response.object = "Hello Katamari3";
 
 		]]>
       </execute>
