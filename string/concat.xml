@@ -12,16 +12,16 @@
         <url></url>
 	  </urls>-->
       <inputs>
-		<key id="data" type="xs:string" paramType="variable" /><!-- variable, path, or query? -->
+		<key id="data" type="xs:string" paramType="variable" required="true" /><!-- variable, path, or query? -->
         <key id="delimiter" type="xs:string" paramType="variable" default="," />
       </inputs>
       <execute>
         <![CDATA[
 
 y.include('http://www.datatables.org/javascript/json2.js');
-var pdata = JSON.parse(data);
+var values = JSON.parse(data);
 
-response.object = new Error("This is an error");//{ items: JSON.parse(data) };
+response.object = values.join(delimiter);
 
 		]]>
       </execute>
