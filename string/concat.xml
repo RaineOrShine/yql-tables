@@ -31,12 +31,9 @@ var map = function(arr, f) {
 	}
 	return results;
 };
-Array.prototype.map = function(f) {
-	return map(this, f);
-};
 
 // output
-response.object = values.map(function(item) {
+response.object = map(values, function(item) {
 	return item;
 }).join(delimiter);
 
