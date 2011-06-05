@@ -18,7 +18,7 @@
       <execute>
         <![CDATA[
 
-//y.include('http://www.datatables.org/javascript/json2.js');
+y.include('http://www.datatables.org/javascript/json2.js');
 var pdata = JSON.parse(data);
 
 response.object = pdata;
