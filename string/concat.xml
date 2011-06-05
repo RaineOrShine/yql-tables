@@ -4,7 +4,7 @@
     <author>Raine Lourie ( raineorshine@gmail.com )</author>
     <description>Concatenate string values</description>
     <documentationURL></documentationURL>
-    <sampleQuery>select * from {table} where values='[1,2,3,4,5]' and delimiter=',';</sampleQuery>
+    <sampleQuery>select * from {table} where values='[1,2,3,4,5]' and delimiter='&' and formatString='num=%s';</sampleQuery>
   </meta>
   <bindings>
     <select itemPath="" produces="JSON">
