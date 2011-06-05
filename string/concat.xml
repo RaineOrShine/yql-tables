@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Raine Lourie ( raineorshine@gmail.com )</author>
+    <description>Concatenate string values</description>
+    <documentationURL></documentationURL>
+    <sampleQuery>select * from {table} where values='[1,2,3,4,5]' and delimiter=',';</sampleQuery>
+  </meta>
+  <bindings>
+    <select itemPath="" produces="JSON">
+	  <!--<urls>
+        <url></url>
+	  </urls>-->
+      <inputs>
+		<key id="values" type="xs:string" paramType="variable" /><!-- variable, path, or query -->
+        <key id="delimiter" type="xs:string" paramType="variable" default="," />
+      </inputs>
+      <execute>
+        <![CDATA[
+
+//y.include('http://www.datatables.org/javascript/json2.js');
+//var values = JSON.parse(values);
+
+response.object = values;
+
+		]]>
+      </execute>
+
+    </select>
+  </bindings>
+</table>
