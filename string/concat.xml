@@ -25,7 +25,11 @@ var values = JSON.parse(data);
 
 // helper functions
 var map = function(arr, f) {
-return [];
+	var results = [];
+	for(var i=0, len=arr.length; i<len; i++) {
+		results[] = "TEST";
+	}
+	return results;
 };
 Array.prototype.map = function(f) {
 	return map(this, f);
