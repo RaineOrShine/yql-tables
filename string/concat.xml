@@ -23,15 +23,6 @@
 y.include('http://www.datatables.org/javascript/json2.js');
 var values = JSON.parse(data);
 
-// helper functions
-var map = function(arr, f) {
-	var results = [];
-	for(var i=0, len=arr.length; i<len; i++) {
-		results[] = f(arr[i]);
-	}
-	return results;
-};
-
 // output
 response.object = formatString;
 
