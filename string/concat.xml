@@ -12,8 +12,8 @@
         <url></url>
 	  </urls>-->
       <inputs>
-		<key id="values" type="xs:string" paramType="variable" /><!-- variable, path, or query? -->
-        <key id="b" type="xs:string" paramType="variable" default="," />
+		<key id="str" type="xs:string" paramType="variable" /><!-- variable, path, or query? -->
+        <key id="delimiter" type="xs:string" paramType="variable" default="," />
       </inputs>
       <execute>
         <![CDATA[
@@ -21,7 +21,7 @@
 //y.include('http://www.datatables.org/javascript/json2.js');
 //var values = JSON.parse(values);
 
-response.object = values;
+response.object = str.split(delimiter);
 
 		]]>
       </execute>
