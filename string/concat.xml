@@ -26,7 +26,8 @@ var values = JSON.parse(data);
 // helper functions
 var map = function(arr, f) {
 	var results = [];
-	for(var i=0, var len=arr.length; i<len; i++) {
+	var len = arr.length;
+	for(var i=0; i<len; i++) {
 		results[] = arr[i];
 	}
 	return results;
