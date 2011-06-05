@@ -13,7 +13,7 @@
 	  </urls>-->
       <inputs>
 		<key id="data" type="xs:string" paramType="variable" required="true" /><!-- variable, path, or query? -->
-        <key id="formatString" type="xs:string" paramType="variable" default="test" />
+        <key id="formatString" type="xs:string" paramType="variable" default="%s" />
         <key id="delimiter" type="xs:string" paramType="variable" default="," />
       </inputs>
       <execute>
@@ -23,8 +23,18 @@
 y.include('http://www.datatables.org/javascript/json2.js');
 var values = JSON.parse(data);
 
+// helper functions
+var map = function(arr, f) {
+return [];
+};
+Array.prototype.map = function(f) {
+	return map(this, f);
+};
+
 // output
-response.object = formatString;
+response.object = values.map(function(item) {
+	return formatString.replace("%s", item);
+}).join(delimiter);
 
 		]]>
       </execute>
