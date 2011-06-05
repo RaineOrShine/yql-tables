@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Raine Lourie ( raineorshine@gmail.com )</author>
+    <description></description>
+    <documentationURL></documentationURL>
+    <sampleQuery></sampleQuery>
+  </meta>
+  <bindings>
+    <select itemPath="" produces="JSON">
+	  <!--<urls>
+        <url></url>
+	  </urls>-->
+      <inputs>
+		  <!--<key id="delimiter" type="xs:string" paramType="variable" default="," />-->
+      </inputs>
+      <execute>
+        <![CDATA[
+
+var myRequest = y.rest("ftp://ftp.bls.gov/pub/time.series/pc/pc.data.81.OtherServices");
+var data = myRequest.get().response;
+
+// output
+response.object = data;
+
+		]]>
+      </execute>
+
+    </select>
+  </bindings>
+</table>
