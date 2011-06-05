@@ -37,7 +37,7 @@ Array.prototype.map = function(f) {
 
 // output
 response.object = values.map(function(item) {
-	return formatString.replace("%s", item);
+	return item;
 }).join(delimiter);
 
 		]]>
