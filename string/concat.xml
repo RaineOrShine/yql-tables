@@ -33,9 +33,7 @@ var map = function(arr, f) {
 };
 
 // output
-response.object = map(values, function(item) {
-	return item;
-}).join(delimiter);
+response.object = formatString;
 
 		]]>
       </execute>
