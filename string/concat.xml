@@ -13,7 +13,7 @@
 	  </urls>-->
       <inputs>
 		<key id="data" type="xs:string" paramType="variable" required="true" /><!-- variable, path, or query? -->
-        <key id="formatString" type="xs:string" paramType="variable" default="%s" />
+        <key id="formatString" type="xs:string" paramType="variable" default="test" />
         <key id="delimiter" type="xs:string" paramType="variable" default="," />
       </inputs>
       <execute>
