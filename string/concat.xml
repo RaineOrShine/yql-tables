@@ -21,7 +21,7 @@
 y.include('http://www.datatables.org/javascript/json2.js');
 var pdata = JSON.parse(data);
 
-response.object = { data: pdata };
+response.object = new Error("This is an error");//{ items: JSON.parse(data) };
 
 		]]>
       </execute>
